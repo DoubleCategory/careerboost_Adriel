@@ -8,7 +8,7 @@ Web/ vuejs와 firebase를 이용한 To-do List 만들기
 vuejs, firebase
 
 ### 참가자
-* 최승언 [프로젝트]()
+* 최승언 [프로젝트](https://github.com/Loyalchoi610/careerboost_Adriel)
 * 배범주 [프로젝트]()
 
 -----
