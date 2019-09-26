@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "todolist": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": false
+      }
+    }
+  }
+}
