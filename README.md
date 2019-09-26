@@ -9,7 +9,7 @@ vuejs, firebase
 
 ### 참가자
 * 최승언 [프로젝트](https://github.com/Loyalchoi610/careerboost_Adriel)
-* 배범주 [프로젝트]()
+* 배범주 [프로젝트](https://github.com/DoubleCategory/careerboost_Adriel)
 
 -----
 
@@ -27,7 +27,7 @@ vuejs, firebase
 2. 개인 계정으로, 신청한 기업의 Repository fork
 3. 디렉토리(양식: 성명+기수)생성 및 브랜치 생성 후 작업
 4. commit은 1개의 기능단위로 해주실 것을 권장
-5. 기한 내에 브랜치(기수/깃헙계정)로 PR(제목 양식: 기업명 - 프로젝트명 - 성명) 
+5. 기한 내에 브랜치(기수/영어성명)로 PR(제목 양식: 기업명 - 프로젝트명 - 성명) 
 6. 코드리뷰 후, 최종 프로젝트 PR(제목 양식: 기업명 - 최종 - 성명)
 
 
