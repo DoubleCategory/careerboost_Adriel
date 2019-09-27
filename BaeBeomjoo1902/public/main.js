@@ -39,7 +39,7 @@ window.onload = function () {
     });
 };
 
-
+// ES6 변수 지정 키워드인 const 혹은 let을 사용하시길 권장드립니다.
 var tableContents = {
 
     logined: false,
@@ -101,6 +101,7 @@ var app = new Vue({
                 var code = error.code;
                 var message = error.message;
                 var details = error.details;
+                // const { code, message, details } = error; ES6의 구조분해할당을 쓸 수 있습니다.
                 
                 console.error('There was an error when calling the Cloud Function', error);
                 window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
@@ -113,11 +114,13 @@ var app = new Vue({
 
         },
         moveToRight: function (key, state) {
-
+        // moveToRight(key, state) {
+            // 메소드는 이렇게 선언할 수도 있습니다.
+        // }
             this.isButtonDisabled = true;
             var moveToRight = firebase.functions().httpsCallable('moveToRight');
             moveToRight({ key: key, state: state }).then(function (result) {
-
+                // ES6 함수 선언식인 화살표 함수 사용을 추천드립니다. () => { return; }
                 console.log(result);
                 this.isButtonDisabled = false;
 
