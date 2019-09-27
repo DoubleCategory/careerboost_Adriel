@@ -33,12 +33,19 @@ exports.addToDoList = functions.https.onCall((data, context) => {
         state: "TODO",
         date: date,
         priority: priority
+        // name,
+        // text,
+        // state: "TODO",
+        // date,
+        // priority
+        // 위 처럼 약식으로 처리할 수 있습니다.
     }).then(() => {
         return true;
     })
         .catch((error) => {
             throw new functions.https.HttpsError('unknown', error.message, error);
         });
+    // 위에 부분이 포맷팅이 필요해보입니다. prettier같은 플러그인을 사용하시길 추천드립니다.
 });
 
 exports.moveToRight = functions.https.onCall((data, context) => {
