@@ -1,87 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Firebase Hosting</title>
+    <script src="/__/firebase/6.6.2/firebase-app.js"></script>
+    <script src="/__/firebase/6.6.2/firebase-auth.js"></script>
+    <script src="/__/firebase/6.6.2/firebase-database.js"></script>
+    <script src="/__/firebase/6.6.2/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
 
-  <script src="/__/firebase/6.6.2/firebase-app.js"></script>
-  <script src="/__/firebase/6.6.2/firebase-auth.js"></script>
-  <script src="/__/firebase/6.6.2/firebase-database.js"></script>
-  <script src="/__/firebase/6.6.2/firebase-functions.js"></script>
-  <script src="/__/firebase/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="main.css?v006" />
+  </head>
 
-  <link rel="stylesheet" href="main.css?v006">
-</head>
+  <body>
+    <section id="app">
+      <my-component></my-component>
+    </section>
 
-<body>
-  <section id="app">
-
-    <div v-if="!logined">
-      <button v-on:click="login">google login</button>
-    </div>
-
-    <div v-if="logined" v-show="!isAddToDoMenu">
-      <div>
-        <br>
-        <br>
-        <button style="margin-left: 60%;" v-bind:disabled="isButtonDisabled" v-on:click="clickAddTodo">새로운 TODO
-          등록</button>
-        <button v-bind:disabled="isButtonDisabled" v-on:click="logout">logout</button>
-        <br>
-        <br>
-        <div class="title">나의 해야할 일들</div>
-
-      </div>
-      <br>
-      <div class="row" v-for="state in states">
-        <div class="top">
-          <div>{{state}}</div>
-        </div>
-        <div class="todo" v-for="content in todoList" v-if="content.state === state">
-          <div>{{content.text}}</div>
-          <br>
-          <div>등록날짜 {{content.date}}, {{content.name}}, 우선순위{{content.priority}}</div>
-          <button v-bind:disabled="isButtonDisabled" v-if="state !=`DONE`"
-            v-on:click="moveToRight(content.key,content.state)">></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="addtodo-menu" v-show="isAddToDoMenu">
-      <h1>할일 등록</h1>
-      <form>
-        <label>어떤일인가요?</label>
-        <br>
-        <input type="text" maxLength="24" placeholder="Vue 공부하기(24자까지)" v-model="sendObject.text" />
-        <br><br>
-        <label>누가 할일인가요?</label>
-        <br>
-        <input type="text" maxLength="20" placeholder="홍길동" v-model="sendObject.name" />
-        <br><br>
-        <label>우선순위를 선택하세요</label>
-        <input type="radio" id="one" value="1" v-model="sendObject.priority">
-        <label for="one">1</label>
-        <input type="radio" id="one" value="2" v-model="sendObject.priority">
-        <label for="one">2</label>
-        <input type="radio" id="one" value="3" v-model="sendObject.priority">
-        <label for="one">3</label>
-        <br>
-      </form>
-      <div>
-        <button v-bind:disabled="isButtonDisabled" v-on:click="backToTable">이전</button>
-        <button v-bind:disabled="isButtonDisabled" v-on:click="addToDoList">제출</button>
-        <button v-bind:disabled="isButtonDisabled" v-on:click="removeToDoList">내용지우기</button>
-      </div>
-
-    </div>
-
-  </section>
-
-  <script src="main.js?v026"></script>
-</body>
-
+    <script src="main.js?v042"></script>
+  </body>
 </html>
